@@ -1,0 +1,39 @@
+@SimpleBreakfast_HostAddress = http://localhost:5129
+@id=9b55b324-5ddd-47ec-a12d-9e2f5c63e59d
+
+GET {{SimpleBreakfast_HostAddress}}/breakfasts
+Accept: application/json
+
+###
+GET {{SimpleBreakfast_HostAddress}}/breakfasts/{{id}}
+Accept: application/json
+
+###
+POST {{SimpleBreakfast_HostAddress}}/breakfasts
+Content-Type: application/json
+
+{
+    "name": "Spaghetti",
+    "description": "Pizaary",
+    "startDateTime": "2022-04-08T08:00:00",
+    "endDateTime": "2022-04-08T11:00:00",
+    "savory": "Oatmeal, Avocado Toast",
+    "Sweet": "Cookie"
+}
+
+###
+PUT {{SimpleBreakfast_HostAddress}}/breakfasts/{{id}}
+Content-Type: application/json
+
+{
+    "name": "Egg Noodle",
+    "description": "Egg Egg Egg! Join us for a healthy breakfast..",
+    "startDateTime": "2022-04-08T08:00:00",
+    "endDateTime": "2022-04-08T11:00:00",
+    "savory": "Oatmeal, Avocado Toast",
+    "Sweet": "Cookie"
+}
+
+###
+DELETE {{SimpleBreakfast_HostAddress}}/breakfasts/{{id}}
+Accept: application/json
